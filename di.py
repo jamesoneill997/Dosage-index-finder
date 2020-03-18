@@ -10,10 +10,10 @@ import sys
 
 chrome_options = Options()  
 chrome_options.add_argument("--headless")  
-browser = webdriver.Chrome("../../../chromedriver", chrome_options = chrome_options)
+browser = webdriver.Chrome("../../../chromedriver", options = chrome_options)
 
 #enter horse names into the below list in quotes, separated by commas. eg. ["red rum","arkle"]
-horses = ["new year new me"]
+horses = ["new safuhdisaoh new me"]
 f = open("output.txt", 'w+')
 
 class Horse_tipper():
@@ -52,8 +52,18 @@ class Horse_tipper():
 			print(results)
 			f.write(result)
 
+	def get_horses(self, url):
+		horses = []
+		jockeys = []
 
-	
-tip = Horse_tipper()
+		browser.get(url)
+		time.sleep(1)
+		runners = browser.find_elements_by_class_name("name")
 
-tip.get_dosage(horses)
+		for result in runners:
+			horse, jockey = str(result.text).split("\n")
+
+			horses.append(horse)
+			jockeys.append(jockey)
+		
+		return horses
