@@ -25,9 +25,7 @@ class Horse_tipper():
 
 			try:
 				browser.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr/td[5]/input").click()
-				details = browser.find_element_by_xpath("/html/body/table/tbody/tr[5]/td[1]/center/table[1]/tbody").text
-				print(details)
-				
+				details = browser.find_element_by_xpath("/html/body/table/tbody/tr[5]/td[1]/center/table[1]/tbody").text				
 				results.append(horse + " " + details[details.rfind("DI"):])
 			
 			except:
@@ -49,8 +47,7 @@ class Horse_tipper():
 		
 		
 		for result in results:
-			print(results)
-			f.write(result)
+			f.write(result + "\n")
 
 	def get_horses(self, url):
 		horses = []
@@ -67,3 +64,9 @@ class Horse_tipper():
 			jockeys.append(jockey)
 		
 		return horses
+
+
+
+tip = Horse_tipper()
+
+tip.get_dosage(tip.get_horses("https://www.betfair.com/exchange/plus/horse-racing/market/1.170189978"))
