@@ -1,6 +1,9 @@
-Steady Rock DI = 4.50   CD = 1.05 - 16 Starts, 1 Wins, 2 Places, 2 Shows Career Earnings: $19,255
-Graceygab DI = 4.00   CD = 0.90 - 16 Starts, 2 Wins, 4 Places, 2 Shows Career Earnings: $57,726
-Box Of Gold DI = 0.93   CD = 0.12 - 6 Starts, 1 Wins, 1 Places, 0 Shows Career Earnings: $26,860
-Fairfield DI = 2.71   CD = 0.69 - 17 Starts, 2 Wins, 1 Places, 1 Shows Career Earnings: $28,014
-Last Great DI = 1.32   CD = 0.23 - 5 Starts, 1 Wins, 0 Places, 0 Shows Career Earnings: $11,050
-Ladyofdragonstone DI = 16.33   CD = 0.96 - 11 Starts, 1 Wins, 4 Places, 1 Shows Career Earnings: $29,005
+Devils Angel DI = 3.00   CD = 1.00 - 3 Starts, 1 Wins, 0 Places, 0 Shows Career Earnings: £3,752
+Socru DI = 2.00   CD = 0.50
+Amazing Alba DI = 1.22   CD = 0.30
+Global Humor DI = 3.00   CD = 0.73 - 2 Starts, 1 Wins, 0 Places, 1 Shows Career Earnings: £3,873
+Redesdale Rebel DI = 3.00   CD = 0.70
+Dodgy Bob DI = 1.33   CD = 0.29
+Laoise DI = 0.67   CD = -0.15
+Corton Lass DI = 3.00   CD = 0.50
+Phantasmal DI = 2.06   CD = 0.38

@@ -24,7 +24,8 @@ class Horse_tipper():
 			browser.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr/td[1]/input").send_keys(horse)
 
 			try:
-				browser.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr/td[5]/input").click()
+				browser.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr/td[6]/input").click()
+				time.sleep(1.2)
 				details = browser.find_element_by_xpath("/html/body/table/tbody/tr[5]/td[1]/center/table[1]/tbody").text				
 				results.append(horse + " " + details[details.rfind("DI"):])
 			
@@ -40,7 +41,7 @@ class Horse_tipper():
 				
 				else:
 					browser.get("https://www.pedigreequery.com/{}".format(horse))
-					details = browser.find_element_by_xpath("/html/body/table/tbody/tr[5]/td[1]/center/table[1]/tbody/tr/td[1]/center/font").text
+					details = "DI: UNKNOWN CD: UNKNOWN"
 
 				
 				results.append(horse + " " + details[details.rfind("DI"):])
@@ -69,4 +70,4 @@ class Horse_tipper():
 
 tip = Horse_tipper()
 
-tip.get_dosage(tip.get_horses("https://www.betfair.com/exchange/plus/horse-racing/market/1.170189978"))
+tip.get_dosage(tip.get_horses("https://www.betfair.com/exchange/plus/horse-racing/market/1.170949099?nodeId=29865212"))
