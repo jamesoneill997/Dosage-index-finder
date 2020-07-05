@@ -47,6 +47,8 @@ class Horse_tipper():
 				results.append(horse + " " + details[details.rfind("DI"):])
 		
 		
+
+		#write result
 		for result in results:
 			f.write(result + "\n")
 
