@@ -8,7 +8,7 @@ message = Mail(
     subject='Sending with Twilio SendGrid is Fun',
     html_content='<strong>and easy to do anywhere, even with Python</strong>')
 try:
-    sg = SendGridAPIClient(os.environ.get('lu7yWzT4TMKrnYtMtODCZw.IWy7t8HfR_QBpZySUXrONtJ0ubwdtE5J0JPZnMAeDEg'))
+    sg = SendGridAPIClient(os.environ.get('SENDGRID'))
     response = sg.send(message)
     print(response.status_code)
     print(response.body)
