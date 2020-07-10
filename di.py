@@ -72,4 +72,4 @@ class Horse_tipper():
 
 tip = Horse_tipper()
 
-tip.get_dosage(tip.get_horses("https://www.betfair.com/exchange/plus/horse-racing/market/1.170949099?nodeId=29865212"))
+tip.get_dosage(tip.get_horses(input("Please paste the market url here: ")))
