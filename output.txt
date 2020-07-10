@@ -1,9 +1,12 @@
-Big Red Oak DI = 8.33   CD = 1.21 - 0 Starts, 0 Wins, 0 Places, 0 Shows Career Earnings: Unraced
-Giulia Ammannati DI = 0.63   CD = -0.18 - 0 Starts, 0 Wins, 0 Places, 0 Shows Career Earnings: Unraced
-Amplio Esquema DI = 1.13   CD = 0.19
-Solo Try DI: UNKNOWN CD: UNKNOWN
-Racing My Father DI = 5.00   CD = 1.06 Career Earnings: Unraced
-Bettys Got Rythm DI = 1.00   CD = 0.25
-Eclipticals Dancer DI = 3.00   CD = 0.78 - 1 Starts, 0 Wins, 0 Places, 1 Shows Career Earnings: $1,991
-Call On Clara DI = 2.73   CD = 0.61 - 0 Starts, 0 Wins, 0 Places, 0 Shows Career Earnings: Unraced
-Meghans Angel DI = 3.00   CD = 0.50 - 0 Starts, 0 Wins, 0 Places, 0 Shows Career Earnings: Unraced
+Gohara DI = 2.27   CD = 0.50 - 5 Starts, 1 Wins, 0 Places, 1 Shows Career Earnings: $16,498
+Tweet Kitten DI = 2.20   CD = 0.66 - 11 Starts, 3 Wins, 2 Places, 3 Shows Career Earnings: $195,765
+Get A Valentine DI = 1.57   CD = 0.72 - 41 Starts, 6 Wins, 7 Places, 8 Shows Career Earnings: $157,267
+Page Down DI = 7.00   CD = 1.19 - 3 Starts, 1 Wins, 0 Places, 0 Shows Career Earnings: $16,090
+Stormy Engagement DI: UNKNOWN CD: UNKNOWN
+Cheese On DI = 2.64   CD = 0.60 - 1 Starts, 1 Wins, 0 Places, 0 Shows Career Earnings: $29,640
+Any Sugar Honey DI = 3.00   CD = 0.75 - 13 Starts, 3 Wins, 0 Places, 3 Shows Career Earnings: $43,600
+Freight Train DI: UNKNOWN CD: UNKNOWN
+Heiko DI: UNKNOWN CD: UNKNOWN
+Golden Emperor DI: UNKNOWN CD: UNKNOWN
+Mr. Hamilton DI: UNKNOWN CD: UNKNOWN
+Eskenfortime DI = 1.75   CD = 0.50 - 7 Starts, 1 Wins, 1 Places, 1 Shows Career Earnings: $16,309
