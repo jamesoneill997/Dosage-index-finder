@@ -75,26 +75,30 @@ class Horse_tipper():
 	def send_mail(self, race):
 		#create txt file
 		self.get_dosage(self.get_horses(race))
+		time.sleep(10)
 
 		with open('output.txt', 'rb') as f:
 			data = f.read()
-			f.close()
-		encoded_file = base64.b64encode(data).decode()
+			encoded_file = base64.b64encode(data).decode()
 
-		attached_file = Attachment(
-			FileContent(str(encoded_file,'utf-8')),
-			FileName('output.txt'),
-			FileType('txt'),
-			Disposition('attachment')
-		)
+			
 
-		message = Mail(
-			from_email='jamesoneill997@gmail.com',
-			to_emails='jamesoneill997@gmail.com',
-			subject='race',
-			html_content='<p>See attached</p>')
+			attached_file = Attachment(
+				FileContent(str(encoded_file)),
+				FileName('output.txt'),
+				FileType('txt'),
+				Disposition('attachment')
+			)
+
+			message = Mail(
+				from_email='jamesoneill997@gmail.com',
+				to_emails='jamesoneill997@gmail.com',
+				subject='race',
+				html_content='<p>See attached</p>')
 		
-		message.attachment = attached_file
+			message.attachment = attached_file
+
+			f.close()
 		try:
 			sg = SendGridAPIClient(os.environ.get('SENDGRID'))
 			response = sg.send(message)
