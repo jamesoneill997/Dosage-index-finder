@@ -16,12 +16,10 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")  
 browser = webdriver.Chrome("../../../chromedriver", options = chrome_options)
 
-#enter horse names into the below list in quotes, separated by commas. eg. ["red rum","arkle"]
-horses = ["new safuhdisaoh new me"]
-f = open("output.txt", 'w+')
 
 class Horse_tipper():
 	def get_dosage(self,horses):
+		f = open("output.txt", 'w+')
 		results = []
 		browser.get("https://www.pedigreequery.com/")
 		for horse in horses:
@@ -48,13 +46,13 @@ class Horse_tipper():
 					details = "DI: UNKNOWN CD: UNKNOWN"
 
 				
-				results.append(horse + " " + details[details.rfind("DI"):])
-		
-		
+				results.append(horse + " " + details[details.rfind("DI"):])	
 
 		#write result
 		for result in results:
 			f.write(result + "\n")
+		f.close()
+
 
 	def get_horses(self, url):
 		horses = []
@@ -72,19 +70,14 @@ class Horse_tipper():
 		
 		return horses
 	
-	def send_mail(self, race):
-		#create txt file
-		self.get_dosage(self.get_horses(race))
-		time.sleep(10)
+	def send_mail(self):
 
 		with open('output.txt', 'rb') as f:
 			data = f.read()
 			encoded_file = base64.b64encode(data).decode()
 
-			
-
 			attached_file = Attachment(
-				FileContent(str(encoded_file)),
+				FileContent(encoded_file),
 				FileName('output.txt'),
 				FileType('txt'),
 				Disposition('attachment')
@@ -103,13 +96,19 @@ class Horse_tipper():
 			sg = SendGridAPIClient(os.environ.get('SENDGRID'))
 			response = sg.send(message)
 			print(response.status_code)
-			print(response.body)
-			print(response.headers)
 		except Exception as e:
 			print(e)
 
 
 
-tip = Horse_tipper()
 
-tip.send_mail(input("Please paste the market URL here: "))
+def main():
+	tip = Horse_tipper()
+	race = input("Please enter the URL of the market here: ")
+	#create txt file
+	tip.get_dosage(tip.get_horses(race))
+
+	tip.send_mail()
+
+if __name__ == '__main__':
+	main()
