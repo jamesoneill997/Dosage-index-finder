@@ -71,7 +71,7 @@ class Horse_tipper():
 		return horses
 	
 	def send_mail(self):
-
+		#open file
 		with open('output.txt', 'rb') as f:
 			data = f.read()
 			encoded_file = base64.b64encode(data).decode()
@@ -83,9 +83,10 @@ class Horse_tipper():
 				Disposition('attachment')
 			)
 
+			#create message
 			message = Mail(
 				from_email='jamesoneill997@gmail.com',
-				to_emails='jamesoneill997@gmail.com',
+				to_emails='gerfoneill@gmail.com',
 				subject='race',
 				html_content='<p>See attached</p>')
 		
