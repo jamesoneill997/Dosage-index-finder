@@ -12,10 +12,15 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import (Mail, Attachment, FileContent, FileName, FileType, Disposition)
 import base64
 
-chrome_options = Options()  
-chrome_options.add_argument("--headless")  
-browser = webdriver.Chrome("../../../chromedriver", options = chrome_options)
 
+# TODO - REMOVE DEPENDENCY ON CHROMEDRIVER
+# NEED TO EITHER ADD CODE TO DOWNLOAD RELEVANT DRIVER AND PLACE IN CORRECT DIR
+# OR
+# MOVE AWAY FROM WEB SCRAPING ALTOGETHER AND COME UP WITH A MORE ELEGANT SOLUTION (PREFERRED)
+
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+browser = webdriver.Chrome("../../../chromedriver", options = chrome_options)
 
 class Horse_tipper():
 	def get_dosage(self,horses):
@@ -27,7 +32,7 @@ class Horse_tipper():
 
 			try:
 				browser.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr/td[6]/input").click()
-				time.sleep(1.2)
+				time.sleep(1.2) #TODO - REFACTOR TO SLEEP UNTIL ELEM LOADS
 				details = browser.find_element_by_xpath("/html/body/table/tbody/tr[5]/td[1]/center/table[1]/tbody").text				
 				results.append(horse + " " + details[details.rfind("DI"):])
 			
@@ -59,7 +64,7 @@ class Horse_tipper():
 		jockeys = []
 
 		browser.get(url)
-		time.sleep(1)
+		time.sleep(1) #TODO REFACTOR SLEEP
 		runners = browser.find_elements_by_class_name("name")
 
 		for result in runners:
@@ -68,7 +73,7 @@ class Horse_tipper():
 			horses.append(horse)
 			jockeys.append(jockey)
 		
-		return horses
+		return horses #TODO ADD PARENTS OF HORSE IN ORDER TO DEPRECATE HAVING TO ENTER INDEX OF HORSE
 	
 	def send_mail(self):
 		#open file
@@ -111,5 +116,5 @@ def main():
 
 	tip.send_mail()
 
-if __name__ == '__main__':
-	main()
+	if __name__ == '__main__':
+main()
